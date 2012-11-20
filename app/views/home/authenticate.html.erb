@@ -1,0 +1,6 @@
+<h1>
+  <%=current_user.full_name%>
+</h1>
+
+
+<%= link_to "Sign out", destroy_session_path(:user), method: :delete %>
