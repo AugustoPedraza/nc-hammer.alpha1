@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
 
   has_one :company
+
+  def full_name
+    read_attribute(:full_name).empty?? email : read_attribute(:full_name)
+  end
 end
